@@ -81,6 +81,12 @@
                 pobrane_2.style="border-color:red";
             }
         
+        else if(zabranie.options[1].selected==true&&pobrane_2.value=="-0")
+            {
+                alert("Podanaa wartość jest za niska");
+                pobrane_2.style="border-color:red";
+            }
+        
         else if(zabranie.options[1].selected==true&&pobrane_2.value>=21)
             {
                 alert("Podanaa wartość jest za wysoka");
@@ -128,13 +134,13 @@
         
         else if(zabranie.options[3].selected==true&&pobrane_2.value<=0)
             {
-                alert("Podanaa wartość jest za niska (Podaj coś z zakresu od 1 do 21)");
+                alert("Podanaa wartość jest za niska (Podaj coś z zakresu od 1 do 20");
                 pobrane_2.style="border-color:red";
             }
         
         else if(zabranie.options[3].selected==true&&pobrane_2.value>=21)
             {
-                alert("Podanaa wartość jest za wysoka (Podaj z zakresu od 1 do 21)");
+                alert("Podanaa wartość jest za wysoka (Podaj z zakresu od 1 do 20)");
                 pobrane_2.style="border-color:red";
             }
         
@@ -154,8 +160,9 @@
             var los_2="";
             
             
+            var t_suma= I_L.value+I_C.value+I_ZS.value;
             
-             if(zabranie.options[4].selected==true&&I_L.value>=0&&I_L.value<=21&&I_C.value>=0&&I_C.value<=21&&I_ZS.value>=0&&I_ZS.value<=21)
+             if(zabranie.options[4].selected==true&&I_L.value>=0&&I_L.value<=20&&I_C.value>=0&&I_C.value<=20&&I_ZS.value>=0&&I_ZS.value<=20&&I_L.value!="-0"&&I_C.value!="-0"&&I_ZS.value!="-0")
                 {
                     
          
@@ -214,20 +221,20 @@
             
           pobrane.innerHTML=los_2;
             
-            if(zabranie.options[4].selected==true&&I_L.value>21)
+            if(zabranie.options[4].selected==true&&I_L.value>20)
                 {
-                    alert("Argument z ilością liter przkroczył wartość 21.Zmniejsz go");
+                    alert("Argument z ilością liter przkroczył wartość 20.Zmniejsz wartość");
                     I_L.style="border-color:red";
                 }
-            else if(zabranie.options[4].selected==true&&I_C.value>21)
+            else if(zabranie.options[4].selected==true&&I_C.value>20)
                 {
-                    alert("Argument z ilością cyfer przkroczył wartość 21.Zmniejsz go");
+                    alert("Argument z ilością cyfer przkroczył wartość 20.Zmniejsz wartość");
                     I_C.style="border-color:red";
                 }
             
-            else if(zabranie.options[4].selected==true&&I_ZS.value>21)
+            else if(zabranie.options[4].selected==true&&I_ZS.value>20)
                 {
-                    alert("Argument z ilością znaków specjalnych przkroczył wartość 21.Zmniejsz go");
+                    alert("Argument z ilością znaków specjalnych przkroczył wartość 20.Zmniejsz wartość");
                     I_ZS.style="border-color:red";
                 }
             
@@ -247,6 +254,12 @@
                        alert("Nieprawidłowa wartość pola długości cyfer"); 
                        I_C.style="border-color:red";
                     }
+            
+             else if(zabranie.options[4].selected==true&&I_ZS.value=='-0')
+                    {
+                       alert("Nieprawidłowa wartość pola długości znaków specjalnych"); 
+                       I_ZS.style="border-color:red";
+                    }
                     
                 else if(zabranie.options[4].selected==true&&I_C.value<0)
                     {
@@ -255,10 +268,9 @@
                     }
                 else if(zabranie.options[4].selected==true&&I_ZS.value<0)
                     {
-                    alert("Zwiększ Długość cyfer");
+                    alert("Zwiększ Długość znaków specjalnych");
                     I_ZS.style="border-color:red";
                     }
-            
              
                 }
     
