@@ -58,7 +58,7 @@
         var los="";
         
          
-        if(zabranie.options[1].selected==true&&pobrane_2.value>0&&pobrane_2.value<21)
+        if(zabranie.options[1].selected==true&&pobrane_2.value>4&&pobrane_2.value<21)
         {
             
             
@@ -75,25 +75,25 @@
             
         }
             pobrane.innerHTML=los;
-        }else if(zabranie.options[1].selected==true&&pobrane_2.value<=0)
+        }else if(zabranie.options[1].selected==true&&pobrane_2.value<=4)
             {
-                alert("Podanaa wartość jest za niska");
+                alert("Podana wartość jest za niska");
                 pobrane_2.style="border-color:red";
             }
         
         else if(zabranie.options[1].selected==true&&pobrane_2.value=="-0")
             {
-                alert("Podanaa wartość jest za niska");
+                alert("Podana wartość jest za niska");
                 pobrane_2.style="border-color:red";
             }
         
         else if(zabranie.options[1].selected==true&&pobrane_2.value>=21)
             {
-                alert("Podanaa wartość jest za wysoka");
+                alert("Podana wartość jest za wysoka");
                 pobrane_2.style="border-color:red";
             }
         
-        else if(zabranie.options[2].selected==true&&pobrane_2.value>0&&pobrane_2.value<21)
+        else if(zabranie.options[2].selected==true&&pobrane_2.value>4&&pobrane_2.value<21)
         {
             for(var i=1;i<=pobrane_2.value;i++){
             
@@ -105,18 +105,18 @@
         }
             pobrane.innerHTML=los;
         }
-        else if(zabranie.options[2].selected==true&&pobrane_2.value<=0)
+        else if(zabranie.options[2].selected==true&&pobrane_2.value<=4)
             {
-                alert("Podanaa wartość jest za niska");
+                alert("Podana wartość jest za niska");
                 pobrane_2.style="border-color:red";
             }
         
         else if(zabranie.options[2].selected==true&&pobrane_2.value>=21)
             {
-                alert("Podanaa wartość jest za wysoka");
+                alert("Podana wartość jest za wysoka");
                 pobrane_2.style="border-color:red";
             }
-        else if(zabranie.options[3].selected==true&&pobrane_2.value>0&&pobrane_2.value<21)
+        else if(zabranie.options[3].selected==true&&pobrane_2.value>4&&pobrane_2.value<21)
         {
             for(var i=1;i<=pobrane_2.value;i++){
             
@@ -132,15 +132,15 @@
             pobrane.innerHTML=los;
         }
         
-        else if(zabranie.options[3].selected==true&&pobrane_2.value<=0)
+        else if(zabranie.options[3].selected==true&&pobrane_2.value<=4)
             {
-                alert("Podanaa wartość jest za niska (Podaj coś z zakresu od 1 do 20");
+                alert("Podana wartość jest za niska (Podaj coś z zakresu od 5 do 20");
                 pobrane_2.style="border-color:red";
             }
         
         else if(zabranie.options[3].selected==true&&pobrane_2.value>=21)
             {
-                alert("Podanaa wartość jest za wysoka (Podaj z zakresu od 1 do 20)");
+                alert("Podana wartość jest za wysoka (Podaj z zakresu od 5 do 20)");
                 pobrane_2.style="border-color:red";
             }
         
@@ -160,7 +160,7 @@
             var los_2="";
             
             
-            var t_suma= I_L.value+I_C.value+I_ZS.value;
+            var t_suma= I_L+I_C+I_ZS;
             
              if(zabranie.options[4].selected==true&&I_L.value>=0&&I_L.value<=20&&I_C.value>=0&&I_C.value<=20&&I_ZS.value>=0&&I_ZS.value<=20&&I_L.value!="-0"&&I_C.value!="-0"&&I_ZS.value!="-0")
                 {
