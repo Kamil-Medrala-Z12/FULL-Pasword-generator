@@ -78,12 +78,17 @@ h3 {
     font-size: larger;
 }
 
+
 #B_aside {
-    color: white;
+
     font-weight: bold;
-    font-size: 18px;
     font-family: 'Lexend Deca', sans-serif;
+    color: white;
+    font-size: 20px;
+    position: relative;
+    margin-top: 30px;
 }
+
 
 @media(min-width:768px) {
     #end {
@@ -156,4 +161,43 @@ input[type=number] {
     position: absolute;
     width: 190px;
     border-radius: 20px;
+}
+
+
+
+#Numer {
+    font-family: 'Lexend Deca', sans-serif;
+    position: relative;
+    width: 150px;
+    height: 20px;;
+    right: 120px;
+    top: 20px;
+    left: 5px;
+    margin-top: 30px;
+   
+}
+
+@media (max-width:575px){
+    .threedee-typo{
+        font-size: 2.5em;
+    }#P_T{
+        font-size: 14px;
+        font-weight: bold;
+    
+    }##B_aside{
+        font-size: 10px;
+        
+    }#Numer{
+        left: 20px;
+    }
+}
+
+
+@media(min-width:992px) and (max-width:1199px){
+    span{
+        position: relative;
+        left: 5%;
+    }#B_aside{
+        margin-top: 45px;
+    }
 }

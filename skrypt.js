@@ -6,7 +6,10 @@
      var Zebranie_2 = document.getElementById("creed_1");
      var Zebranie_3 = document.getElementById("creed_2");
 
-     var opcja_P_Type = document.getElementById("Wybur").options[0].selected;
+     var P_Length=document.getElementById("Numer");
+
+
+
 
 
 
@@ -35,12 +38,14 @@
              Zebranie_2.style.display = "block";
              Zebranie_3.style.display = "block";
              Delete.style.display = "none";
+             P_Length.style.display="none";
 
          } else if (zabranie.options[4].selected == false) {
              Zebranie_1.style.display = "none";
              Zebranie_2.style.display = "none";
              Zebranie_3.style.display = "none";
              Delete.style.display = "block";
+             P_Length.style.display="block";
          }
 
 
