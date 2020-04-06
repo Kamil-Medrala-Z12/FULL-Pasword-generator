@@ -6,7 +6,7 @@
      var Zebranie_2 = document.getElementById("creed_1");
      var Zebranie_3 = document.getElementById("creed_2");
 
-     var P_Length=document.getElementById("Numer");
+     var P_Length = document.getElementById("Numer");
 
 
 
@@ -38,14 +38,14 @@
              Zebranie_2.style.display = "block";
              Zebranie_3.style.display = "block";
              Delete.style.display = "none";
-             P_Length.style.display="none";
+             P_Length.style.display = "none";
 
          } else if (zabranie.options[4].selected == false) {
              Zebranie_1.style.display = "none";
              Zebranie_2.style.display = "none";
              Zebranie_3.style.display = "none";
              Delete.style.display = "block";
-             P_Length.style.display="block";
+             P_Length.style.display = "block";
          }
 
 
@@ -81,14 +81,11 @@
 
              }
              pobrane.innerHTML = los;
-         } else if (zabranie.options[1].selected == true && pobrane_2.value <= 4) {
-             alert("Podana wartość jest za niska");
-             pobrane_2.style = "border-color:red";
-         } else if (zabranie.options[1].selected == true && pobrane_2.value == "-0") {
-             alert("Podana wartość jest za niska");
+         } else if (zabranie.options[1].selected == true && pobrane_2.value <= 4 || pobrane_2.value == "-0") {
+             alert("The value provided is too low");
              pobrane_2.style = "border-color:red";
          } else if (zabranie.options[1].selected == true && pobrane_2.value >= 21) {
-             alert("Podana wartość jest za wysoka");
+             alert("The value provided is too high");
              pobrane_2.style = "border-color:red";
          } else if (zabranie.options[2].selected == true && pobrane_2.value > 4 && pobrane_2.value < 21) {
              for (var i = 1; i <= pobrane_2.value; i++) {
@@ -101,10 +98,10 @@
              }
              pobrane.innerHTML = los;
          } else if (zabranie.options[2].selected == true && pobrane_2.value <= 4) {
-             alert("Podana wartość jest za niska");
+             alert("The value provided is too low");
              pobrane_2.style = "border-color:red";
          } else if (zabranie.options[2].selected == true && pobrane_2.value >= 21) {
-             alert("Podana wartość jest za wysoka");
+             alert("The value provided is too high");
              pobrane_2.style = "border-color:red";
          } else if (zabranie.options[3].selected == true && pobrane_2.value > 4 && pobrane_2.value < 21) {
              for (var i = 1; i <= pobrane_2.value; i++) {
@@ -120,10 +117,10 @@
              }
              pobrane.innerHTML = los;
          } else if (zabranie.options[3].selected == true && pobrane_2.value <= 4) {
-             alert("Podana wartość jest za niska (Podaj coś z zakresu od 5 do 20");
+             alert("The value provided is too low. Please enter something between 5 and 20");
              pobrane_2.style = "border-color:red";
          } else if (zabranie.options[3].selected == true && pobrane_2.value >= 21) {
-             alert("Podana wartość jest za wysoka (Podaj z zakresu od 5 do 20)");
+             alert("The value provided is too high. Please enter a value between 5 and 20");
              pobrane_2.style = "border-color:red";
          }
 
@@ -200,31 +197,31 @@
          pobrane.innerHTML = los_2;
 
          if (zabranie.options[4].selected == true && I_L.value > 20) {
-             alert("Argument z ilością liter przkroczył wartość 20.Zmniejsz wartość");
+             alert("The argument with the number of letters exceeded 20. Reduce the value");
              I_L.style = "border-color:red";
          } else if (zabranie.options[4].selected == true && I_C.value > 20) {
-             alert("Argument z ilością cyfer przkroczył wartość 20.Zmniejsz wartość");
+             alert("The number argument has exceeded the value 20. Reduce the value");
              I_C.style = "border-color:red";
          } else if (zabranie.options[4].selected == true && I_ZS.value > 20) {
-             alert("Argument z ilością znaków specjalnych przkroczył wartość 20.Zmniejsz wartość");
+             alert("The argument with the number of special characters exceeded 20. Lower the value");
              I_ZS.style = "border-color:red";
          } else if (zabranie.options[4].selected == true && I_L.value < 0) {
-             alert("Zwiększ Długość liter");
+             alert("Increase Letter Length");
              I_L.style = "border-color:red";
          } else if (zabranie.options[4].selected == true && I_L.value == '-0') {
-             alert("Nieprawidłowa wartość pola długości liter");
+             alert("Invalid letter length field");
              I_L.style = "border-color:red";
          } else if (zabranie.options[4].selected == true && I_C.value == '-0') {
-             alert("Nieprawidłowa wartość pola długości cyfer");
+             alert("Invalid digit length field");
              I_C.style = "border-color:red";
          } else if (zabranie.options[4].selected == true && I_ZS.value == '-0') {
-             alert("Nieprawidłowa wartość pola długości znaków specjalnych");
+             alert("Invalid value for special characters length field");
              I_ZS.style = "border-color:red";
          } else if (zabranie.options[4].selected == true && I_C.value < 0) {
-             alert("Zwiększ Długość cyfer");
+             alert("Increase the length of digits");
              I_C.style = "border-color:red";
          } else if (zabranie.options[4].selected == true && I_ZS.value < 0) {
-             alert("Zwiększ Długość znaków specjalnych");
+             alert("Increase the length of special characters");
              I_ZS.style = "border-color:red";
          }
 
